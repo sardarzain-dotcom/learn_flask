@@ -1,0 +1,154 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&family=DM+Serif+Display:ital@0;1&display=swap");
+
+:root {
+  --bg: #fff8ef;
+  --bg-soft: #ffe9cf;
+  --ink: #1f2937;
+  --accent: #c2410c;
+  --accent-2: #0f766e;
+  --card: #ffffff;
+  --line: #f1d7b5;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Manrope", sans-serif;
+  color: var(--ink);
+  background: radial-gradient(circle at 15% 20%, #fff2de 0%, transparent 40%),
+    radial-gradient(circle at 80% 0%, #ffe2c2 0%, transparent 35%),
+    var(--bg);
+  line-height: 1.6;
+}
+
+header {
+  padding: 1.2rem 1rem;
+  border-bottom: 2px solid var(--line);
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(4px);
+  position: sticky;
+  top: 0;
+}
+
+nav {
+  max-width: 980px;
+  margin: 0 auto;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+nav .brand {
+  font-family: "DM Serif Display", serif;
+  font-size: 1.5rem;
+  color: var(--accent);
+}
+
+nav .links {
+  display: flex;
+  gap: 0.8rem;
+  flex-wrap: wrap;
+}
+
+nav a {
+  text-decoration: none;
+  font-weight: 700;
+  color: var(--ink);
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 0.35rem 0.85rem;
+}
+
+nav a:hover {
+  color: var(--accent);
+  border-color: var(--accent);
+}
+
+main {
+  max-width: 980px;
+  margin: 1.5rem auto 2rem;
+  padding: 0 1rem;
+}
+
+.hero,
+.card {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  padding: 1.2rem;
+  box-shadow: 0 8px 20px rgba(194, 65, 12, 0.08);
+}
+
+.hero h1,
+h2 {
+  font-family: "DM Serif Display", serif;
+  margin-top: 0;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+img {
+  width: 100%;
+  border-radius: 14px;
+  border: 1px solid var(--line);
+  display: block;
+}
+
+.highlight {
+  color: var(--accent-2);
+  font-weight: 700;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 0.8rem;
+  background: #fffdfa;
+}
+
+caption {
+  caption-side: top;
+  text-align: left;
+  font-weight: 700;
+  color: var(--accent);
+  margin-bottom: 0.4rem;
+}
+
+th,
+td {
+  border: 1px solid #edc89a;
+  padding: 0.6rem;
+  text-align: left;
+}
+
+th {
+  background: #ffe7c8;
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  color: #6b7280;
+}
+
+@media (max-width: 640px) {
+  nav {
+    justify-content: center;
+  }
+
+  nav .brand {
+    width: 100%;
+    text-align: center;
+  }
+}
